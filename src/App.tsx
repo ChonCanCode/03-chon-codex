@@ -1,35 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./style.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>JavaScript Daily Challenge</h1>
+
+      <h2>Day 1</h2>
+      <span>
+        In this simple assignment you are given a number and have to make it
+        negative. But maybe the number is already negative?
+      </span>
+      <code>
+        makeNegative(1); // return -1 <br />
+        makeNegative(-5); // return -5 <br />
+        makeNegative(0); // return 0 <br />
+        makeNegative(0.12); // return -0.12
+      </code>
+
+      <h2>Solution</h2>
+      <code>
+        {`function makeNegative(num) {
+  if (num <= 0) {
+    return num;
+  } else {
+    return -num;
+  }
+}`}
+      </code>
+      <h3>Best practice</h3>
+      <code>{` return -Math.abs(num);`}</code>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
