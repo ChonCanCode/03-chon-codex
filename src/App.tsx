@@ -70,6 +70,40 @@ makeNegative(0.12); // return -0.12`}
 }
       `}
       </code>
+      <br />
+      <hr />
+      <h2>Day 3</h2>
+      <span>
+        Complete the method that takes a boolean value and return a "Yes" string
+        for true, or a "No" string for false.
+      </span>
+
+      <h3>My Solution</h3>
+      <span>
+        Important here of having .map(Number) without this it will return in an
+        array of string instead of array of splited numbers
+      </span>
+      <code>
+        {`
+   function boolToWord(bool) {
+  if(bool === true){
+    return "Yes"
+  }
+  else{
+      return "No"
+  }
+}
+      `}
+      </code>
+
+      <h3>Best practice</h3>
+      <code>
+        {`
+function boolToWord( bool ){
+  return bool ? 'Yes':'No';
+}
+      `}
+      </code>
     </>
   );
 }
