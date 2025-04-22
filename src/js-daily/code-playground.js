@@ -1,5 +1,7 @@
-const reverse = (n) => {
-  return parseInt(n.toString().split("").reverse().join(""), 10);
-};
+function grow(x) {
+  return x.map();
+}
 
-console.log(reverse(1234));
+let x = [1, 2, 3, 4];
+
+console.log(grow);

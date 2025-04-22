@@ -104,6 +104,29 @@ function boolToWord( bool ){
 }
       `}
       </code>
+      <br />
+      <hr />
+      <h2>Day 4</h2>
+      <span>
+        Complete the method that takes a boolean value and return a "Yes" string
+        for true, or a "No" string for false.
+      </span>
+
+      <h3>Searched solutiopn</h3>
+      <span>
+        Important here of having .map(Number) without this it will return in an
+        array of string instead of array of splited numbers
+      </span>
+      <code>
+        {`
+function grow(x){
+let result = 1;
+  for (let i = 0; i < x.length; i++) {
+    result *= x[i];
+  }
+  return result;
+      }`}
+      </code>
     </>
   );
 }
