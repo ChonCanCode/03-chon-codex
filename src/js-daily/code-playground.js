@@ -1,7 +1,12 @@
-function grow(x) {
-  return x.map();
-}
+const reverseSeq = (n) => {
+  let result = [];
 
-let x = [1, 2, 3, 4];
+  for (let i = n; i > 0; i--) {
+    result.push(i);
+  }
+  return result;
+};
 
-console.log(grow);
+let n = 5;
+
+console.log(reverseSeq(n));

@@ -127,6 +127,34 @@ let result = 1;
   return result;
       }`}
       </code>
+      <br />
+      <hr />
+      <h2>Day 5</h2>
+      <span>
+        Build a function that returns an array of integers from n to 1 where
+        n&gt;0.
+      </span>
+
+      <h3>Self score: 60%</h3>
+      <span>
+        My logic of using for loop is correct but failed to pull it out
+        specially the finaly part.
+      </span>
+      <code>
+        {`
+const reverseSeq = (n) => {
+  let result = [];
+
+  for (let i = n; i > 0; i--) {
+    result.push(i);
+  }
+  return result;
+};
+
+let n = 5;
+
+console.log(reverseSeq(n));`}
+      </code>
     </>
   );
 }
