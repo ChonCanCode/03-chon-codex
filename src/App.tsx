@@ -174,6 +174,44 @@ console.log(reverseSeq(n));`}
   }
   
   return result;
+
+
+  or 
+
+  function toString(num) {
+  
+  return num.toString();
+  return String(num);
+
+  }
+
+}`}
+      </code>
+      <br />
+      <hr />
+      <h2>Day 7</h2>
+      <span>
+        Create a function which answers the question "Are you playing banjo?".
+        If your name starts with the letter "R" or lower case "r", you are
+        playing banjo!
+      </span>
+
+      <h3>Self score: 40%</h3>
+      <span>Logic is ok still struggle with syntax.</span>
+      <code>
+        {`function areYouPlayingBanjo(name) {
+  if (name[0].toLowerCase() === 'r') {
+    return name + ' plays banjo';
+  } else {
+    return name + ' does not play banjo';
+  }
+}
+
+
+  or 
+
+function areYouPlayingBanjo(name) {
+  return name + (name[0].toLowerCase() == 'r' ? ' plays' : ' does not play') + " banjo";
 }`}
       </code>
     </>

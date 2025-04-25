@@ -1,7 +1,11 @@
-function numberToString(n) {
-  return "n";
+function areYouPlayingBanjo(name) {
+  return (
+    name +
+    (name[0].toLowerCase() === "r" ? " plays" : " does not play") +
+    " banjo"
+  );
 }
 
-let n = 5;
+let name = "rain";
 
-console.log(numberToString(n));
+console.log(areYouPlayingBanjo(name));
