@@ -1,12 +1,7 @@
-const reverseSeq = (n) => {
-  let result = [];
-
-  for (let i = n; i > 0; i--) {
-    result.push(i);
-  }
-  return result;
-};
+function numberToString(n) {
+  return "n";
+}
 
 let n = 5;
 
-console.log(reverseSeq(n));
+console.log(numberToString(n));

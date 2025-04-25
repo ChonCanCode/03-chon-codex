@@ -155,6 +155,27 @@ let n = 5;
 
 console.log(reverseSeq(n));`}
       </code>
+      <br />
+      <hr />
+      <h2>Day 6</h2>
+      <span>
+        We need a function that can transform a number (integer) into a string.
+      </span>
+
+      <h3>Self score: 60%</h3>
+      <span>Logic is ok still struggle with syntax.</span>
+      <code>
+        {`function numberToString(num) {
+  
+  let result = ''
+  
+  if (typeof num === 'number'){
+    result = num.toString();
+  }
+  
+  return result;
+}`}
+      </code>
     </>
   );
 }
