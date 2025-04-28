@@ -214,6 +214,21 @@ function areYouPlayingBanjo(name) {
   return name + (name[0].toLowerCase() == 'r' ? ' plays' : ' does not play') + " banjo";
 }`}
       </code>
+      <br />
+      <hr />
+      <h2>Day 8</h2>
+      <span>
+        Create a function that takes an integer as an argument and returns
+        "Even" for even numbers or "Odd" for odd numbers.
+      </span>
+
+      <h3>Self score: 90%</h3>
+      <span>No need for help just check previous syntax error.</span>
+      <code>
+        {`function evenOrOdd(number) {
+  return number % 2 === 0 ? "Even" : "Odd"
+}`}
+      </code>
     </>
   );
 }
