@@ -229,6 +229,38 @@ function areYouPlayingBanjo(name) {
   return number % 2 === 0 ? "Even" : "Odd"
 }`}
       </code>
+      <br />
+      <hr />
+      <h2>Day 9</h2>
+      <span>
+        Create a function which translates a given DNA string into RNA. "GCAT"
+        to "GCAU"
+      </span>
+
+      <h3>Self score: 40%</h3>
+      <span>
+        Only managed to come up with with a few built in function but unable to
+        put them together to use.
+      </span>
+
+      <code>
+        <span style={{ color: "red" }}>My Attempt:</span>
+        <br />
+        {`function DNAtoRNA(dna) {
+  return for (let i = dna.split("")){
+    if char === (char === "T"? "U":char).join("")  }
+}`}
+        <br />
+        <span style={{ color: "green" }}>Correct outcome:</span>
+        <br />
+        {`function DNAtoRNA(dna) {
+  return dna
+  .split("")
+  .map((char) => (char === "T"?"U":char))
+  .join("");
+}
+`}
+      </code>
     </>
   );
 }
