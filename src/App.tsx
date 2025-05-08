@@ -261,6 +261,53 @@ function areYouPlayingBanjo(name) {
 }
 `}
       </code>
+
+      <br />
+      <hr />
+      <h2>Day 10</h2>
+      <span>
+        Write a function that takes an array of numbers and returns the sum of
+        the numbers. The numbers can be negative or non-integer. If the array
+        does not contain any numbers then you should return 0.
+      </span>
+
+      <h3>Self score: 10%</h3>
+      <span>Need to review code</span>
+
+      <code>
+        <span style={{ color: "red" }}>My Attempt:</span>
+        <br />
+        {`function sum (numbers) {
+  if numbers !== [] (
+  return numbers.map(num ++!) ) else {
+    return 0
+  }
+}`}
+        <br />
+        <span style={{ color: "green" }}>Correct outcome:</span>
+        <br />
+        {`function sum(numbers) {
+  if (numbers.length === 0) {
+    return 0;
+  }
+  return numbers.reduce((acc, num) => acc + num, 0);
+}`}{" "}
+        OR{" "}
+        {`function sum(numbers) {
+  return numbers.reduce((a, b) => a + b, 0);
+}
+`}{" "}
+        or{" "}
+        {`sum = function (numbers) {
+  "use strict";
+  var total = 0;
+  for(var i = 0; i < numbers.length; i++) {
+    total += numbers[i];
+  }
+  return total;
+};
+`}
+      </code>
     </>
   );
 }
