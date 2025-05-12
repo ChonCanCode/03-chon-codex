@@ -3,10 +3,10 @@ import "./style.css";
 function App() {
   return (
     <>
-      <h1>JavaScript Daily Challenge</h1>
+      <h1 className="text-black-500">JavaScript Daily Challenge</h1>
       <br />
       <hr />
-      <h2>Day 1</h2>
+      <h2>Challenge 1</h2>
       <span>
         In this simple assignment you are given a number and have to make it
         negative. But maybe the number is already negative?
@@ -32,7 +32,7 @@ makeNegative(0.12); // return -0.12`}
       <code>{` return -Math.abs(num);`}</code>
       <br />
       <hr />
-      <h2>Day 2</h2>
+      <h2>Challenge 2</h2>
       <span>
         Given a random non-negative number, you have to return the digits of
         this number within an array in reverse order.
@@ -72,7 +72,7 @@ makeNegative(0.12); // return -0.12`}
       </code>
       <br />
       <hr />
-      <h2>Day 3</h2>
+      <h2>Challenge 3</h2>
       <span>
         Complete the method that takes a boolean value and return a "Yes" string
         for true, or a "No" string for false.
@@ -106,7 +106,7 @@ function boolToWord( bool ){
       </code>
       <br />
       <hr />
-      <h2>Day 4</h2>
+      <h2>Challenge 4</h2>
       <span>
         Complete the method that takes a boolean value and return a "Yes" string
         for true, or a "No" string for false.
@@ -129,7 +129,7 @@ let result = 1;
       </code>
       <br />
       <hr />
-      <h2>Day 5</h2>
+      <h2>Challenge 5</h2>
       <span>
         Build a function that returns an array of integers from n to 1 where
         n&gt;0.
@@ -157,7 +157,7 @@ console.log(reverseSeq(n));`}
       </code>
       <br />
       <hr />
-      <h2>Day 6</h2>
+      <h2>Challenge 6</h2>
       <span>
         We need a function that can transform a number (integer) into a string.
       </span>
@@ -189,7 +189,7 @@ console.log(reverseSeq(n));`}
       </code>
       <br />
       <hr />
-      <h2>Day 7</h2>
+      <h2>Challenge 7</h2>
       <span>
         Create a function which answers the question "Are you playing banjo?".
         If your name starts with the letter "R" or lower case "r", you are
@@ -216,7 +216,7 @@ function areYouPlayingBanjo(name) {
       </code>
       <br />
       <hr />
-      <h2>Day 8</h2>
+      <h2>Challenge 8</h2>
       <span>
         Create a function that takes an integer as an argument and returns
         "Even" for even numbers or "Odd" for odd numbers.
@@ -231,7 +231,7 @@ function areYouPlayingBanjo(name) {
       </code>
       <br />
       <hr />
-      <h2>Day 9</h2>
+      <h2>Challenge 9</h2>
       <span>
         Create a function which translates a given DNA string into RNA. "GCAT"
         to "GCAU"
@@ -264,7 +264,7 @@ function areYouPlayingBanjo(name) {
 
       <br />
       <hr />
-      <h2>Day 10</h2>
+      <h2>Challenge 10</h2>
       <span>
         Write a function that takes an array of numbers and returns the sum of
         the numbers. The numbers can be negative or non-integer. If the array
@@ -306,6 +306,46 @@ function areYouPlayingBanjo(name) {
   }
   return total;
 };
+`}
+      </code>
+      <br />
+      <hr />
+      <h2>Challenge 11</h2>
+      <span>
+        Write a function named setAlarm/set_alarm/set-alarm/setalarm (depending
+        on language) which receives two parameters. The first parameter,
+        employed, is true whenever you are employed and the second parameter,
+        vacation is true whenever you are on vacation.
+      </span>
+
+      <h3>Self score: 100%</h3>
+      <span>All went well in first attempt</span>
+
+      <code>
+        <span style={{ color: "green" }}>My Attempt:</span>
+        <br />
+        {`function setAlarm(employed, vacation){
+if (employed === true && vacation ==! true) {
+  return true
+} else {
+  return false
+}
+`}
+
+        <span style={{ color: "green" }}>Other outcomes:</span>
+        <br />
+        {`const setAlarm = (employed, vacation) => employed && !vacation;`}
+        <br />
+        <hr />
+
+        {`function setAlarm(employed, vacation){
+  return employed && !vacation;
+}
+`}
+        <hr />
+        {`function setAlarm(employed, vacation){
+  return (employed && !vacation) ? true : false;
+}
 `}
       </code>
     </>
