@@ -1,10 +1,10 @@
-function DNAtoRNA(dna) {
-  return dna
+function doubleChar(str) {
+  return str
     .split("")
-    .map((char) => (char === "T" ? "U" : char))
+    .map((num) => num + num)
     .join("");
 }
 
-let dna = "GCAT";
+const word = "Strong!";
 
-console.log(DNAtoRNA(dna));
+console.log(doubleChar(word));
