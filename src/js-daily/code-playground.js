@@ -1,10 +1,5 @@
-function doubleChar(str) {
-  return str
-    .split("")
-    .map((num) => num + num)
-    .join("");
+function basicOp(operation, value1, value2) {
+  return eval(value1 + operation + value2);
 }
 
-const word = "Strong!";
-
-console.log(doubleChar(word));
+console.log(basicOp("+", 4, 7));

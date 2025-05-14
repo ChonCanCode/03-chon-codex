@@ -388,6 +388,83 @@ console.log(doubleChar(word));
   return word;
 };`}
       </code>
+      <br />
+      <hr />
+      <h2>Challenge 13</h2>
+      <span>
+        Your task is to create a function that does four basic mathematical
+        operations. The function should take three arguments -
+        operation(string/char), value1(number), value2(number). The function
+        should return result of numbers after applying the chosen operation.
+      </span>
+
+      <h3>Self score: 40%</h3>
+      <span>
+        Syntax error, I tried to use .map() & .join() to have the formula output
+        the result directly. But in coding there can only be num/char/boolean
+        therefore even by joining the output together with string it will not
+        work.
+      </span>
+
+      <code>
+        <span style={{ color: "green" }}>First take:</span>
+        <br />
+        {`function basicOp(operation, value1, value2){
+  
+  array = [operation, value1, value2]
+
+  result = array.map(calc = value1 + operation + value2)
+
+  return result;
+}
+
+const task = ['+', 4, 7];
+
+console.log(basicOp(task));`}
+        <span style={{ color: "green" }}>Other outcomes:</span>
+        <br />
+        {`function basicOp(operation, value1, value2) {
+  if (operation === "+") {
+    return value1 + value2;
+  }
+  if (operation === "-") {
+    return value1 - value2;
+  }
+  if (operation === "*") {
+    return value1 * value2;
+  }
+  if (operation === "/") {
+    return value1 / value2;
+  } else {
+    return "operation input error";
+  }
+}
+
+console.log(basicOp("+", 4, 7));
+`}
+        <hr />
+        {`function basicOp(operation, value1, value2) {
+    switch (operation) {
+        case '+':
+            return value1 + value2;
+        case '-':
+            return value1 - value2;
+        case '*':
+            return value1 * value2;
+        case '/':
+            return value1 / value2;
+        default:
+            return 0;
+    }
+}`}{" "}
+        <hr />
+        {`function basicOp(operation, value1, value2) {
+  return eval(value1 + operation + value2);
+}
+
+console.log(basicOp("+", 4, 7));
+`}
+      </code>
     </>
   );
 }
