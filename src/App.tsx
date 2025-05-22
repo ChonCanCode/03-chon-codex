@@ -465,6 +465,38 @@ console.log(basicOp("+", 4, 7));
 console.log(basicOp("+", 4, 7));
 `}
       </code>
+      <br />
+      <hr />
+      <h2>Challenge 14</h2>
+      <span>
+        Complete the solution so that it reverses the string passed into it.
+      </span>
+
+      <h3>Self score: 80%</h3>
+      <span>
+        Logically and syntax I am on the right track. As this exercise similar
+        the one in the past.
+      </span>
+
+      <code>
+        <span style={{ color: "green" }}>First take:</span>
+        <br />
+        {`function solution(str) {
+  return str.split("").reverse().join("");
+}`}
+        <span style={{ color: "green" }}>Other outcomes:</span>
+        <br />
+        {`const solution = str => str.split('').reverse().join('');
+`}
+        <hr />
+        {`const solution = s => [...s].reverse().join('')`} <hr />
+        {`function solution(s){
+  var o = '';
+  for (var i = s.length - 1; i >= 0; i--)
+    o += s[i];
+  return o;
+}`}
+      </code>
     </>
   );
 }
