@@ -12,37 +12,55 @@ export default function Rankup() {
           elements in a squared, regardless of the order.
         </span>
 
-        <h3>Self score: 60%</h3>
+        <h3>Self score: 10%</h3>
         <span>
-          Getting there with .map() within the () there must be something
-          telling what do with the map layout
+          Miss understood the question, dont even know what I wrote lol
         </span>
 
         <code>
-          <span style={{ color: "green" }}>My Attempt:</span>
+          <span className="text-red-300">My Attempt:</span>
           <br />
-          {`function doubleChar(str) {
-  return str
-    .split("")
-    .map((num) => num + num)
-    .join("");
+          {`function comp(array1, array2) {
+  let result1 = [];
+  let result2 = [];
+
+  for (let i = 0; i < array1.length; i++) {
+    result1.push(array1[i]);
+  }
+
+  for (let i = 0; i < array2.length; i++) {
+    result2.push(array1[i]);
+  }
+
+  if (result1 || results2) {
+    return true;
+  } else {
+    false;
+  }
 }
 
-const word = "Strong!";
+let a = [121, 144, 19, 161, 19, 144, 19, 11];
+let b = [121, 14641, 20736, 361, 25921, 361, 20736, 361];
 
-console.log(doubleChar(word));
+console.log(comp(a, b));
 
 `}
 
-          <span style={{ color: "green" }}>Other outcomes:</span>
+          <span className="text-green-300">Correct outcomes:</span>
           <br />
-          {`function doubleChar(str) {
-	var word = '';
-  for (var i = 0; i < str.length; i++){
-  	word = word + str[i] + str[i];
-  };
-  return word;
-};`}
+          {`function comp(array1, array2) {
+  if (!array1 || !array2) return false;
+
+  // Square each element in array1
+  const squaredArray1 = array1.map(x => x * x);
+
+  // Sort both arrays
+  squaredArray1.sort((a, b) => a - b);
+  array2.sort((a, b) => a - b);
+
+  // Compare elements
+  return squaredArray1.every((val, index) => val === array2[index]);
+}`}
         </code>
       </div>
     </>
