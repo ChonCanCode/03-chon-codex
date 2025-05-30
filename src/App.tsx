@@ -16,6 +16,7 @@ function App() {
           <Link to="/fundamental">Fundamental</Link>
         </nav>
       </div>
+      <code>ddjsadlkdklja</code>
     </>
   );
 }
