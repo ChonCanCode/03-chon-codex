@@ -63,6 +63,56 @@ console.log(comp(a, b));
 }`}
         </code>
       </div>
+      <br />
+      <hr />
+      <h2>Challenge 02</h2>
+      <span>
+        There is an array with some numbers. All numbers are equal except for
+        one. Try to find it!
+      </span>
+
+      <h3>Self score: 40%</h3>
+      <span>
+        My attempt was not wrong, but I am not aware that I can use for loop
+        twice to loop out individual unit and have it compare each other.
+      </span>
+
+      <code>
+        <span className="text-red-300">My Attempt:</span>
+        <br />
+        {`
+function findUniq(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== arr[i]) {
+      return arr[i];
+    }
+  }
+}
+
+let array1 = [1, 1, 1, 2, 1, 1];
+
+console.log(findUniq(array1));
+
+`}
+
+        <span className="text-green-300">Correct outcomes:</span>
+        <br />
+        {`function findUniq(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let count = 0;
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i] === arr[j]) {
+        count++;
+      }
+    }
+    if (count === 1) {
+      return arr[i];
+    }
+  }
+}
+let array1 = [1, 1, 1, 2, 1, 1];
+console.log(findUniq(array1));`}
+      </code>
     </>
   );
 }
