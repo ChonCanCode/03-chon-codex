@@ -1,17 +1,19 @@
-// There is an array with some numbers. All numbers are equal except for one. Try to find it! t’s guaranteed that array contains at least 3 numbers. The tests contain some very huge arrays, so think about performance.
-
 function findUniq(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    let count = 0;
-    for (let j = 0; j < arr.length; j++) {
-      if (arr[i] === arr[j]) {
-        count++;
-      }
-    }
-    if (count === 1) {
-      return arr[i];
-    }
+  console.log("Original array:", arr);
+
+  arr.sort((a, b) => a - b);
+  console.log("Sorted array:", arr);
+
+  if (arr[0] !== arr[1]) {
+    console.log(" if Unique number is at the start:", arr[0]);
+    return arr[0];
+  } else {
+    console.log("if Unique number is at the end:", arr[arr.length - 1]);
+    return arr[arr.length - 1];
   }
 }
+
 let array1 = [1, 1, 1, 2, 1, 1];
-console.log(findUniq(array1)); // Output: 2
+let array2 = [2, 2, 2, 1, 2, 2];
+console.log("Final result:", findUniq(array1));
+console.log("Final result:", findUniq(array2));
