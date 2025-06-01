@@ -1,19 +1,26 @@
-function findUniq(arr) {
-  console.log("Original array:", arr);
+// The marketing team is spending way too much time typing in hashtags.
+// Let's help them with our own Hashtag Generator!
 
-  arr.sort((a, b) => a - b);
-  console.log("Sorted array:", arr);
+// Here's the deal:
 
-  if (arr[0] !== arr[1]) {
-    console.log(" if Unique number is at the start:", arr[0]);
-    return arr[0];
+//     It must start with a hashtag (#).
+//     All words must have their first letter capitalized.
+//     If the final result is longer than 140 chars it must return false.
+//     If the input or the result is an empty string it must return false.
+
+// " Hello there thanks for trying my Kata"  =>  "#HelloThereThanksForTryingMyKata"
+// "    Hello     World   "                  =>  "#HelloWorld"
+// ""                                        =>  false
+
+function generateHashtag(str) {
+  let noSpaces = str.split(" ").join("");
+  if (noSpaces.length !== 0 && noSpaces.length < 140) {
+    return "#" + noSpaces[0].toUpperCase() + noSpaces.slice(1);
   } else {
-    console.log("if Unique number is at the end:", arr[arr.length - 1]);
-    return arr[arr.length - 1];
+    return false;
   }
 }
 
-let array1 = [1, 1, 1, 2, 1, 1];
-let array2 = [2, 2, 2, 1, 2, 2];
-console.log("Final result:", findUniq(array1));
-console.log("Final result:", findUniq(array2));
+const str = "i am awsome!";
+
+console.log(generateHashtag(str));
