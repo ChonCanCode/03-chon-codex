@@ -13,14 +13,20 @@
 // ""                                        =>  false
 
 function generateHashtag(str) {
-  let noSpaces = str.split(" ").join("");
-  if (noSpaces.length !== 0 && noSpaces.length < 140) {
-    return "#" + noSpaces[0].toUpperCase() + noSpaces.slice(1);
-  } else {
-    return false;
-  }
+  if (!str || str.trim() === "") return false;
+
+  const words = str
+    .trim()
+    .split(/\s+/)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
+
+  const hashtag = "#" + words.join("");
+
+  return hashtag.length > 140 ? false : hashtag;
 }
 
 const str = "i am awsome!";
 
 console.log(generateHashtag(str));
+
+// https://www.codewars.com/kata/52449b062fb80683ec000024/solutions/javascript

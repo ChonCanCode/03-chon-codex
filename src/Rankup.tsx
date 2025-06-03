@@ -113,6 +113,67 @@ console.log(findUniq(array1));
 let array1 = [1, 1, 1, 2, 1, 1];
 console.log(findUniq(array1));`}
       </code>
+
+      <br />
+      <hr />
+      <h2>Challenge 03</h2>
+      <span>
+        The marketing team is spending way too much time typing in hashtags.
+        Let's help them with our own Hashtag Generator! Here's the deal: It must
+        start with a hashtag (#). All words must have their first letter
+        capitalized. If the final result is longer than 140 chars it must return
+        false. If the input or the result is an empty string it must return
+        false.
+      </span>
+
+      <h3>Self score: 50%</h3>
+      <span>
+        Managed to use the things that I learned before, but unable to resolove
+        adding Captial letter in every word.
+      </span>
+
+      <code>
+        <span className="text-red-300">My Attempt:</span>
+        <br />
+        {`
+function generateHashtag(str) {
+  let noSpaces = str.split(" ").join("");
+  if (noSpaces.length !== 0 && noSpaces.length < 140) {
+    return "#" + noSpaces[0].toUpperCase() + noSpaces.slice(1);
+  } else {
+    return false;
+  }
+}
+`}
+
+        <span className="text-green-300">Correct outcomes:</span>
+        <br />
+        <span className="text-green-500">With regular expression</span>
+        <br />
+        {`function generateHashtag(str) {
+  if (!str || str.trim() === "") return false;
+
+  const words = str.trim().split(/\s+/).map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+  );
+
+  const hashtag = "#" + words.join("");
+
+  return hashtag.length > 140 ? false : hashtag;
+}`}
+        <hr />
+        <span className="text-green-500">Best practice</span>
+        <br />
+        {`function generateHashtag (str) {
+
+  var hashtag = str.split(' ').reduce(function(tag, word) {
+    return tag + word.charAt(0).toUpperCase() + word.substring(1);
+  }, '#');
+  
+  return hashtag.length == 1 || hashtag.length > 140 ? false : hashtag;
+}
+`}
+      </code>
     </>
   );
 }
