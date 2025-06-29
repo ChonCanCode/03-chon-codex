@@ -1,20 +1,26 @@
-function generateHashtag(str) {
-  if (!str || str.trim() === "") return false;
+// If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+//
+// Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
 
-  const words = str
-    .trim()
-    .split(/\s+/)
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
+// Additionally, if the number is negative, return 0.
 
-  const hashtag = "#" + words.join("");
+// Note: If the number is a multiple of both 3 and 5, only count it once.
 
-  return hashtag.length > 140 ? false : hashtag;
+function solution(number) {
+  let sum = 0;
+
+  for (let i = 0; i < number; i++) {
+    if (i % 3 === 0 || i % 5 === 0) {
+      sum += i;
+    }
+  }
+
+  if (sum <= 0) {
+    return 0;
+  }
+  if (sum > 0) {
+    return sum;
+  }
 }
 
-const str = "i am awsome!";
-
-console.log(generateHashtag(str));
-
-// https://www.codewars.com/kata/52449b062fb80683ec000024/solutions/javascript
-
-//Day 08 - Code review - Lazy day only have time to review code from yesterday. Line 2 - .trim() to check user input by removing space at the start. Line 6 regular expressiong space was used as in indicator to split up the words in to array of individual word. Line 7 .map() was used to tringger a group of function to minupulate each word (character 0 to uppercase, return the remaing word). Line 9 simplyy joing the word together as the value is an array. Takeaway, dont limit my self from thinking function can only be trigger by function name() or annoymus function. Instead declaration with varaiable decalaration & built-in can also work while spliting the process in multiple stage help with claraity and minupulation. Lastly in Line 11 return while performing a finaly check.
+//the result should be the sum of all multiples of 3 or 5
