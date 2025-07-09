@@ -1,6 +1,6 @@
 import { Routes, Route, Link } from "react-router-dom";
-import Rankup from "./Rankup.tsx";
-import Fundamental from "./Fundamental.tsx";
+import Rankup from "./pages/challenges/Rankup.tsx";
+import Fundamental from "./pages/challenges/Fundamental.tsx";
 
 function App() {
   return (

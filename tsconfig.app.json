@@ -22,5 +22,10 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "src/pages/challenges/Fundamental.tsx",
+    "src/main.tsx",
+    "src/pages/challenges/Rankup.tsx"
+  ]
 }

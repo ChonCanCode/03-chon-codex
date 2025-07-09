@@ -23,4 +23,4 @@ function solution(number) {
   }
 }
 
-//the result should be the sum of all multiples of 3 or 5
+//the result should be the sum of all multiples of 3 or
