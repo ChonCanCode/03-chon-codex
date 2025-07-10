@@ -1,4 +1,4 @@
-export default function NumberFiveReactMovieApp() {
+export default function ZeroFiveReactMovieApp() {
   return (
     <>
       <h1 className="font-bold">05-react-movies</h1>
